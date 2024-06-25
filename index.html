@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="./script.js" defer></script>
+    <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+</head>
+
+
+<body>
+    <header id="headerContent" class="center">
+        <span class="header-item">Explore our guest houses in different locales to find your perfect retreat.</span>
+        <select>
+            <option value="India">India</option>
+            <option value="Other Country">Other Country</option>
+        </select>
+        <button class="close-button" id="close-button">Later &times</button>
+    </header>
+    <nav class="nav center ">
+        <input type="checkbox" id="nav-check">
+        <div class="nav-header">
+        </div>
+        <div class="nav-btn" onclick="navStatusForMobile()">
+            <label for="nav-check">
+                <span></span>
+                <span></span>
+            </label>
+        </div>
+
+        <div class="nav-links center ">
+            <a href="#">
+                <svg id='Dog_House_24' width='24' height='24' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'
+                    xmlns:xlink='http://www.w3.org/1999/xlink'>
+                    <rect width='24' height='24' stroke='none' fill='#000000' opacity='0' />
+
+
+                    <g transform="matrix(0.85 0 0 0.85 12 12)">
+                        <path
+                            style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;"
+                            transform=" translate(-12, -11.3)"
+                            d="M 12 0.59375 L 11.28125 1.28125 L 0.28125 12.28125 L 1.71875 13.71875 L 12 3.4375 L 22.28125 13.71875 L 23.71875 12.28125 L 12.71875 1.28125 Z M 12 5.3125 L 3 14.3125 L 3 22 L 8 22 L 8 17 C 8 14.800781 9.800781 13 12 13 C 14.199219 13 16 14.800781 16 17 L 16 22 L 21 22 L 21 14.3125 Z"
+                            stroke-linecap="round" />
+                    </g>
+                </svg>
+            </a>
+            <a href="#">Inn</a>
+            <a href="#">Vacation Rental</a>
+            <a href="#">Lodge</a>
+            <a href="#">Luxury</a>
+            <a href="#">Domestic Tour</a>
+            <a href="#">International Tour</a>
+        </div>
+        <div class="navlinks">
+            <a href="">
+                <svg id='Search_20' width='24' height='24' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'
+                    xmlns:xlink='http://www.w3.org/1999/xlink'>
+                    <rect width='20' height='20' stroke='none' fill='#000000' opacity='0' />
+
+
+                    <g transform="matrix(0.8 0 0 0.8 10 10)">
+                        <path
+                            style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;"
+                            transform=" translate(-12, -12)"
+                            d="M 9 2 C 5.1458514 2 2 5.1458514 2 9 C 2 12.854149 5.1458514 16 9 16 C 10.747998 16 12.345009 15.348024 13.574219 14.28125 L 14 14.707031 L 14 16 L 20 22 L 22 20 L 16 14 L 14.707031 14 L 14.28125 13.574219 C 15.348024 12.345009 16 10.747998 16 9 C 16 5.1458514 12.854149 2 9 2 z M 9 4 C 11.773268 4 14 6.2267316 14 9 C 14 11.773268 11.773268 14 9 14 C 6.2267316 14 4 11.773268 4 9 C 4 6.2267316 6.2267316 4 9 4 z"
+                            stroke-linecap="round" />
+                    </g>
+                </svg>
+            </a>
+        </div>
+    </nav>
+    <div class="dicounts-section hidden">
+        <p>Unlock exclusive savings! Use code <strong>‘GUEST20’</strong> for 20% off your first booking. <a
+                href="#">Book
+                Now ></a></p>
+    </div>
+
+    <div class="check" id="zoom-out">
+        <video muted autoplay loop
+            aria-label="Short, looping animation that showcases the striking aerospace-grade titanium design of iPhone 15 Pro, and the stunning color-infused glass design of iPhone 15."
+            src="./assets/Point-of-attraction.mp4">
+        </video>
+        <section class="attractive-main ">
+            <h1>Places</h1>
+            <h3 class="hidden">looks like Heaven.</h3>
+        </section>
+
+
+    </div>
+
+    <section class="list_House ">
+        <div class="lists hidden">
+            <p>Visit Our Places.</p>
+        </div>
+        <div class="carosuel_List">
+            <p class="house-card">
+                <span class="topic">Deluxe</span>
+                <span class="desc">Tromsø, Norway.</span>
+            </p>
+            <p class="house-card">
+                <span class="topic">Nearby attractions</span>
+                <span class="desc">Venice, Italy.</span>
+            </p>
+            <p class="house-card">
+                <span class="topic">Premium amenities.</span>
+                <span class="desc">Toronto, Canada </span>
+            </p>
+            <p class="house-card">
+                <span class="topic"> Home-like stays.</span>
+                <span class="desc">Santorini, Greece.</span>
+            </p>
+            <p class="house-card">
+                <span class="topic">Easy booking </span>
+                <span class="desc">Emerald Lake, Canada.</span>
+            </p>
+        </div>
+    </section>
+
+
+    <section class="reports  card-section">
+        <div class="Guest-houses-available-title hidden ">
+            <p>
+                Our &#9733;
+                Cities for Guest houses.
+            </p>
+        </div>
+        <div class="Guest-houses-available ">
+            <div class="card">
+                <h2>USA</h2>
+                <p> 12 Guest Houses</p>
+            </div>
+            <div class="card">
+                <h2>Canada</h2>
+                <p> 85 Guest Houses</p>
+            </div>
+            <div class="card">
+                <h2>Germany</h2>
+                <p> 95 Guest Houses</p>
+            </div>
+
+            <div class="card">
+                <h2>Japan</h2>
+                <p> 75 Guest Houses</p>
+            </div>
+            <div class="card">
+                <h2>France</h2>
+                <p> 11 Guest Houses</p>
+            </div>
+            <div class="card">
+                <h2>India</h2>
+                <p>130 Guest Houses </p>
+            </div>
+            <div class="card">
+                <h2>Brazil</h2>
+                <p>70 Guest Houses </p>
+            </div>
+            <div class="card">
+                <h2>China</h2>
+                <p>120 Guest Houses </p>
+            </div>
+            <div class="card">
+                <h2>Russia</h2>
+                <p>55 Guest Houses </p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <ul>
+                    <li>Email: contact@guesthouse.com</li>
+                    <li>Phone: (+91) 123-456-7890</li>
+                    <li>Address: Lohegoan, Pune, India</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Rooms</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <ul>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">LinkedIn</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Newsletter</h3>
+                <p>Subscribe to our newsletter for the latest updates.</p>
+                <form>
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Guest House. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <main class="overlay center close">
+        <section class="overlay-container center">
+
+            <div class="containerOfOverlay center ">
+                <button class="button" onclick="toggleOption('option1')">Location<span id="arrow1"
+                        class="arrow down"><svg id='Chevron_Down_48' width='24' height='24' viewBox='0 0 48 48'
+                            xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'>
+                            <rect width='24' height='24' stroke='none' fill='#000000' opacity='0' />
+
+
+                            <g transform="matrix(1.83 0 0 1.83 24 24)">
+                                <path
+                                    style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;"
+                                    transform=" translate(-15, -15.5)"
+                                    d="M 3 12 L 3 10 C 3 9.614 3.223 9.262 3.572 9.096 C 3.9210000000000003 8.93 4.334 8.981 4.634 9.226 L 15 17.708 L 25.367 9.225999999999999 C 25.666 8.981 26.079 8.931 26.429000000000002 9.095999999999998 C 26.779 9.261 27 9.614 27 10 L 27 12 C 27 12.3 26.865 12.584 26.633 12.774000000000001 L 15.633 21.774 C 15.264 22.075 14.735 22.075 14.366 21.774 L 3.3659999999999997 12.774000000000001 C 3.135 12.584 3 12.3 3 12 z"
+                                    stroke-linecap="round" />
+                            </g>
+                        </svg></span></button>
+                <div id="option1" class="option center">London, United kingdom</div>
+
+                <button class="button" onclick="toggleOption('option2')">Amenities<span id="arrow2"
+                        class="arrow down"><svg id='Chevron_Down_48' width='24' height='24' viewBox='0 0 48 48'
+                            xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'>
+                            <rect width='24' height='24' stroke='none' fill='#000000' opacity='0' />
+
+
+                            <g transform="matrix(1.83 0 0 1.83 24 24)">
+                                <path
+                                    style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;"
+                                    transform=" translate(-15, -15.5)"
+                                    d="M 3 12 L 3 10 C 3 9.614 3.223 9.262 3.572 9.096 C 3.9210000000000003 8.93 4.334 8.981 4.634 9.226 L 15 17.708 L 25.367 9.225999999999999 C 25.666 8.981 26.079 8.931 26.429000000000002 9.095999999999998 C 26.779 9.261 27 9.614 27 10 L 27 12 C 27 12.3 26.865 12.584 26.633 12.774000000000001 L 15.633 21.774 C 15.264 22.075 14.735 22.075 14.366 21.774 L 3.3659999999999997 12.774000000000001 C 3.135 12.584 3 12.3 3 12 z"
+                                    stroke-linecap="round" />
+                            </g>
+                        </svg></span></button>
+                <div id="option2" class="option center">
+                    <ul class="amenities-list">
+                        <li>Free Wifi</li>
+                        <li>Indoor Parking</li>
+                        <li>Free Laundry</li>
+                        <li>Swimming Pool</li>
+                        <li>Restourant & Bar</li>
+                        <li>24-hour Concierge service</li>
+                    </ul>
+                </div>
+
+                <button class="button" onclick="toggleOption('option3')"> House Rules
+                    <span id="arrow3" class="arrow down"><svg id='Chevron_Down_48' width='24' height='24'
+                            viewBox='0 0 48 48' xmlns='http://www.w3.org/2000/svg'
+                            xmlns:xlink='http://www.w3.org/1999/xlink'>
+                            <rect width='24' height='24' stroke='none' fill='#000000' opacity='0' />
+
+
+                            <g transform="matrix(1.83 0 0 1.83 24 24)">
+                                <path
+                                    style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;"
+                                    transform=" translate(-15, -15.5)"
+                                    d="M 3 12 L 3 10 C 3 9.614 3.223 9.262 3.572 9.096 C 3.9210000000000003 8.93 4.334 8.981 4.634 9.226 L 15 17.708 L 25.367 9.225999999999999 C 25.666 8.981 26.079 8.931 26.429000000000002 9.095999999999998 C 26.779 9.261 27 9.614 27 10 L 27 12 C 27 12.3 26.865 12.584 26.633 12.774000000000001 L 15.633 21.774 C 15.264 22.075 14.735 22.075 14.366 21.774 L 3.3659999999999997 12.774000000000001 C 3.135 12.584 3 12.3 3 12 z"
+                                    stroke-linecap="round" />
+                            </g>
+                        </svg></span></button>
+                <div id="option3" class="option center">
+                    <div class="table-container">
+                        <table class="house-rules-table">
+                            <thead>
+                                <tr>
+                                    <th>Rule</th>
+                                    <th>Description</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Check-in</td>
+                                    <td>From 3:00 PM to 10:00 PM</td>
+                                </tr>
+                                <tr>
+                                    <td>Check-out</td>
+                                    <td>by 11:00 AM</td>
+                                </tr>
+                                <tr>
+                                    <td> Smoking</td>
+                                    <td><span style="color: red;">&#x2715;</span> Smoking</td>
+                                </tr>
+                                <tr>
+                                    <td>Pets</td>
+                                    <td><span style="color: red;">&#x2715;</span> Pets</td>
+                                </tr>
+                                <tr>
+                                    <td>House Party</td>
+                                    <td><span style="color: green;">&#x2714;</span> Allowed </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <section class="photo-section">
+                <button class="cross-overlay">
+                    <div class="crossBtn" onclick="closeOverlay()">
+                        <svg id='Interface_Delete_1_48' width='48' height='48' viewBox='0 0 48 48'
+                            xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'>
+                            <rect width='48' height='48' stroke='none' fill='#000000' opacity='0' />
+
+
+                            <g transform="matrix(3.14 0 0 3.14 24 24)">
+                                <g style="">
+                                    <g transform="matrix(1 0 0 1 0 0)">
+                                        <line
+                                            style="stroke: rgb(0,0,0); stroke-width: 1; stroke-dasharray: none; stroke-linecap: round; stroke-dashoffset: 0; stroke-linejoin: round; stroke-miterlimit: 4; fill: none; fill-rule: nonzero; opacity: 1;"
+                                            x1="6.5" y1="-6.5" x2="-6.5" y2="6.5" />
+                                    </g>
+                                    <g transform="matrix(1 0 0 1 0 0)">
+                                        <line
+                                            style="stroke: rgb(0,0,0); stroke-width: 1; stroke-dasharray: none; stroke-linecap: round; stroke-dashoffset: 0; stroke-linejoin: round; stroke-miterlimit: 4; fill: none; fill-rule: nonzero; opacity: 1;"
+                                            x1="-6.5" y1="-6.5" x2="6.5" y2="6.5" />
+                                    </g>
+                                </g>
+                            </g>
+                        </svg>
+                    </div>
+                </button>
+            </section>
+        </section>
+    </main>
+</body>
+
+</html>
